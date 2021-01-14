@@ -38,6 +38,7 @@ set(CROSS_COMPILE_INCLUDE_PATH "/usr/${CC_ARCH}/include")
 set(CROSS_COMPILE_LIB_PATH     "/usr/${CC_ARCH}/lib")
 
 
+set(LIBLMS7002M_RUNTIME_DIR      bin)
 set(LIBLMS7002M_LIBRARY_DIR      lib${LIB_SUFFIX})
 set(LIBLMS7002M_INCLUDE_DIR      include)
 
@@ -66,7 +67,7 @@ else()
 endif()
 add_library(lms7compact ${LIBLMS7_TYPE} ${LIBLMS7_FILES})
 
-install(TARGETS lms7compact DESTINATION ${LIBLMS7002M_LIBRARY_DIR})
+install(TARGETS lms7compact DESTINATION ${LIBLMS7002M_RUNTIME_DIR})
 ########################################################################
 # install headers
 ########################################################################
